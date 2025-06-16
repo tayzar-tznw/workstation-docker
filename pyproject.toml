@@ -1,0 +1,36 @@
+[project]
+name = "weather-agent"
+version = "0.1.0"
+description = "A multi-agent Weather Bot system based on the ADK tutorial, demonstrating core ADK concepts like tools, delegation, session state, and callbacks."
+authors = [
+    {name = "AI Assistant", email = "ai.assistant@example.com"}
+]
+license = "Apache License 2.0"
+requires-python = ">=3.11"
+
+[tool.poetry]
+packages = [{include = "weather_agent"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+google-cloud-aiplatform = { extras = [
+    "agent_engines",
+    "adk",
+], version = "=1.95.0" }
+google-adk = "1.0.0" # From notebook
+litellm = ">=1.0.0" # From notebook, check for a more specific version if possible
+google-genai = ">=0.3.0" # google.genai.types used in notebook
+python-dotenv = "^1.0.0" # Good practice for API keys
+absl-py = "^2.2.2"
+ipykernel = "^6.29.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+google-adk = { version = "1.0.0", extras = ["eval"] } # If eval features are used
+jupyter = "^1.1.1"
+ipykernel = "^6.29.5"
+dotenv = "^0.9.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
