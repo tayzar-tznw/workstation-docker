@@ -1,0 +1,14 @@
+project_id = "development-459201"
+region     = "asia-northeast1"
+
+# Reuse the existing cluster and repository instead of creating new ones.
+create_cluster                      = false
+cluster_id                          = "cluster"
+create_artifact_registry_repository = false
+artifact_registry_repository        = "ws-repo"
+image_name                          = "workstation-antigravity"
+
+# Workstation ID => user who gets access to it.
+workstations = {
+  # "alice" = "alice@example.com"
+}
