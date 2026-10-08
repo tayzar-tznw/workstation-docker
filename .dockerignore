@@ -4,7 +4,6 @@
 .gitattributes
 
 # Docker specific
-Dockerfile
 .dockerignore
 
 # Python bytecode and cache
